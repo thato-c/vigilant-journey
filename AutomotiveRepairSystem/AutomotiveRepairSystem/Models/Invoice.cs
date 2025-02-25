@@ -18,5 +18,6 @@ namespace AutomotiveRepairSystem.Models
 
         public Guid ServiceBatchId { get; set; }
         public virtual ServiceBatch ServiceBatch { get; set; }
+        public ICollection<Payment> Payments { get; set; }
     }
 }

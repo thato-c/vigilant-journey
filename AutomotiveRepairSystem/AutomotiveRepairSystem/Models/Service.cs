@@ -13,5 +13,7 @@ namespace AutomotiveRepairSystem.Models
         [Display(Name = "Price (excl. VAT)")]
         [Column(TypeName = "decimal(10, 2)")]
         public decimal PriceExclVAT {get; set;} = decimal.Zero;
+
+        public ICollection<ScheduledService> ScheduledServices { get; set; }
     }
 }

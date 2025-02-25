@@ -2,7 +2,7 @@
 {
     public class ServiceBatch
     {
-        public Guid BatchId { get; set; }
+        public Guid ServiceBatchId { get; set; }
 
         public int Complete { get; set; }
 
@@ -13,5 +13,8 @@
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         public string Status { get; set; }
+
+        public ICollection<ScheduledService> ScheduledServices { get; set; }
+        public virtual Invoice Invoice { get; set; }
     }
 }

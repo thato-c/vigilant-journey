@@ -32,6 +32,6 @@ namespace AutomotiveRepairSystem.Models
         public Guid FuelId { get; set; }
         public virtual Fuel Fuel { get; set; }
         
-        
+        public ICollection<ScheduledService> ScheduledServices { get; set; }
     }
 }
