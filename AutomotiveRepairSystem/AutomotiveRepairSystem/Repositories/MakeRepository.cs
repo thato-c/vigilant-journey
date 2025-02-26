@@ -66,6 +66,6 @@ namespace AutomotiveRepairSystem.Repositories
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-        }
+        
     }
 }

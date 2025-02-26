@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AutomotiveRepairSystem.Models.Customer>
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<h1>Customers</h1>
+<br /> 
+<br />
+
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone
+            </th>
+        </tr>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.FirstName</td>
+                </tr>
+                <tr>
+                    <td>@customer.LastName</td>
+                </tr>
+                <tr>
+                    <td>@customer.Email</td>
+                </tr>
+                <tr>
+                    <td>@customer.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

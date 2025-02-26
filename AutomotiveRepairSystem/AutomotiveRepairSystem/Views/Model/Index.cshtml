@@ -1,0 +1,32 @@
+﻿@model IEnumerable<AutomotiveRepairSystem.Models.Model>
+@{
+    ViewData["Title"] = "Car Models";
+}
+
+<h1>Vehicle Models</h1>
+
+<br />
+<br />
+
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                Name
+            </th>
+        </tr>
+        <tbody>
+            @foreach (var vehicleModel in Model)
+            {
+                <tr>
+                    <td>@vehicleModel.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No Models found</p>
+}

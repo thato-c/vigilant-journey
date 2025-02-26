@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AutomotiveRepairSystem.Models.Make>
+@{
+    ViewData["Title"] = "Car Makes";
+}
+
+<h1>Vehicle Makes</h1>
+
+<br />
+<br />
+
+@if (Model != null){
+    <table class="table">
+        <tr>
+            <th>
+                Name
+            </th>
+        </tr>
+        <tbody>
+            @foreach (var make in Model)
+            {
+                <tr>
+                    <td>@make.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No makes found</p>
+}
