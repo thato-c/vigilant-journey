@@ -4,9 +4,10 @@ namespace AutomotiveRepairSystem.Interfaces
 {
     public interface ICustomerRepository
     {
-        Task<Customer> CreateCustomerAsync(Customer customer);
+        IQueryable<Customer> GetAllCustomersAsync();
         Task<Customer?> GetCustomerByIdAsync(Guid customerId);
-        Task<IEnumerable<Customer>> GetAllCustomersAsync();
-        Task<bool> DeleteCustomerAsync(Guid customerId);
+        void CreateCustomer(Customer customer);
+        Task<Customer> DeleteCustomer(Guid customerId);
+        void Save();
     }
 }

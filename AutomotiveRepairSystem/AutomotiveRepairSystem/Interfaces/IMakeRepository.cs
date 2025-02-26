@@ -4,9 +4,10 @@ namespace AutomotiveRepairSystem.Interfaces
 {
     public interface IMakeRepository
     {
-        Task<Make> CreateMakeAsync(Make make);
-        Task<Make?> GetMakeByIdAsync(Guid modelId);
-        Task<IEnumerable<Make>> GetAllMakesAsync();
-        Task<bool> DeleteMakeAsync(Guid makeId);
+        IQueryable<Make> GetAllMakesAsync();
+        Task<Make?> GetMakeByIdAsync(Guid makeId);
+        void CreateMake(Make make);
+        Task<Make> DeleteMake(Guid makeId);
+        void Save();
     }
 }

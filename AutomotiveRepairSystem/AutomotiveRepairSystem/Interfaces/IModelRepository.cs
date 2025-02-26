@@ -4,9 +4,10 @@ namespace AutomotiveRepairSystem.Interfaces
 {
     public interface IModelRepository
     {
-        Task<Model> CreateModelAsync(Model model);
+        IQueryable<Model> GetAllModelsAsync();
         Task<Model?> GetModelByIdAsync(Guid modelId);
-        Task<IEnumerable<Model>> GetAllModelsAsync();
-        Task<bool> DeleteModelAsync(Guid modelId);
+        void CreateModel(Model model);
+        Task<Model> DeleteModel(Guid modelId);
+        void Save();
     }
 }

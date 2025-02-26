@@ -4,9 +4,10 @@ namespace AutomotiveRepairSystem.Interfaces
 {
     public interface IFuelRepository
     {
-        Task<Fuel> CreateFuelAsync(Fuel fuel);
+        IQueryable<Fuel> GetAllFuelsAsync();
         Task<Fuel?> GetFuelByIdAsync(Guid fuelId);
-        Task<IEnumerable<Fuel>> GetAllFuelsAsync();
-        Task<bool> DeleteFuelAsync(Guid fuelId);
+        void CreateFuel(Fuel fuel);
+        Task<Fuel> DeleteFuel(Guid fuelId);
+        void Save();
     }
 }
