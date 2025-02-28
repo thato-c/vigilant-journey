@@ -1,0 +1,38 @@
+﻿@using AutomotiveRepairSystem.ViewModels
+@model CustomerViewModel
+@{
+    ViewData["Title"] = "Create new Customer";
+}
+
+<h1>Create a new Customer</h1>
+
+<form asp-controller="Customer" asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="FirstName">FirstName</label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName">LastName</label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Phone">Phone</label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <button type="submit">Create Customer</button>
+</form>

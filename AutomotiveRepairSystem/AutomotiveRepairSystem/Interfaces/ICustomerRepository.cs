@@ -7,7 +7,7 @@ namespace AutomotiveRepairSystem.Interfaces
         IQueryable<Customer> GetAllCustomersAsync();
         Task<Customer?> GetCustomerByIdAsync(Guid customerId);
         void CreateCustomer(Customer customer);
-        Task<Customer> DeleteCustomer(Guid customerId);
+        Task<Customer> DeleteCustomerAsync(Guid customerId);
         void Save();
         Task SaveAsync();
     }

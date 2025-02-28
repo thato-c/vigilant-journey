@@ -19,8 +19,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Customer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Customer/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Fuel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVlbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Fuel/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVlbFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Fuel/Index.cshtml]
@@ -57,6 +73,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Model/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kZWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Service/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Service/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tchit/OneDrive/vigilant-journey/AutomotiveRepairSystem/AutomotiveRepairSystem/Views/Service/Index.cshtml]

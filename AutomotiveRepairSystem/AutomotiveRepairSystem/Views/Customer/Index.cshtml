@@ -4,6 +4,7 @@
 }
 
 <h1>Customers</h1>
+<a asp-controller="Customer" asp-action="Create">Create Customer</a>
 <br /> 
 <br />
 
@@ -23,21 +24,19 @@
             <th>
                 Phone
             </th>
+            <th></th>
         </tr>
         <tbody>
             @foreach (var customer in Model)
             {
                 <tr>
                     <td>@customer.FirstName</td>
-                </tr>
-                <tr>
                     <td>@customer.LastName</td>
-                </tr>
-                <tr>
                     <td>@customer.Email</td>
-                </tr>
-                <tr>
                     <td>@customer.Phone</td>
+                    <td>
+                        <a asp-controller="Customer" asp-action="Delete" asp-route-customerId="@customer.CustomerId">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>

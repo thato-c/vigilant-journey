@@ -31,7 +31,7 @@ namespace AutomotiveRepairSystem.Repositories
             _context.Customers.Add(customer);
         }
 
-        public async Task<Customer> DeleteCustomer(Guid customerId)
+        public async Task<Customer> DeleteCustomerAsync(Guid customerId)
         {
             var customer = await _context.Customers.FindAsync(customerId);
 
