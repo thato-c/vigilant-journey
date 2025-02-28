@@ -1,0 +1,19 @@
+﻿@using AutomotiveRepairSystem.ViewModels
+@model ModelDetailViewModel
+@{
+    ViewData["Title"] = "Delete a Model";
+}
+
+<h1>Delete Model</h1>
+
+<form asp-controller="Model" asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="ModelId" />
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <button type="submit">Delete</button>
+</form>

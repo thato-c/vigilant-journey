@@ -22,7 +22,8 @@ namespace AutomotiveRepairSystem.Repositories
         public async Task<Make?> GetMakeByIdAsync(Guid makeId)
         {
             return await _context.Makes
-                .AsNoTracking().FirstOrDefaultAsync(m => m.MakeId == makeId);
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.MakeId == makeId);
         }
 
         public void CreateMake(Make make)

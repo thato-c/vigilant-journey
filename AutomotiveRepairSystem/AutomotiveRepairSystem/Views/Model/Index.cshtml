@@ -16,12 +16,16 @@
             <th>
                 Name
             </th>
+            <th></th>
         </tr>
         <tbody>
             @foreach (var vehicleModel in Model)
             {
                 <tr>
                     <td>@vehicleModel.Name</td>
+                    <td>
+                        <a asp-controller="Model" asp-action="Delete" asp-route-modelId="@vehicleModel.ModelId">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>
