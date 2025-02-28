@@ -21,6 +21,7 @@
             <th>
                 Price (excl. VAT)
             </th>
+            <th></th>
         </tr>
         <tbody>
             @foreach (var service in Model){
@@ -28,6 +29,9 @@
                     <td>@service.Name</td>
                     <td>@service.Description</td>
                     <td>@service.PriceExclVAT</td>
+                    <td>
+                        <a asp-controller="Service" asp-action="Delete" asp-route-serviceId="@service.ServiceId">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>
