@@ -14,12 +14,16 @@
             <th>
                 Name
             </th>
+            <th></th>
         </tr>
         <tbody>
             @foreach (var make in Model)
             {
                 <tr>
                     <td>@make.Name</td>
+                    <td>
+                        <a asp-controller="Make" asp-action="Delete" asp-route-makeId="@make.MakeId">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>

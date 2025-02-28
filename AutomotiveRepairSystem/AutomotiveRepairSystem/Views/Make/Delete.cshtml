@@ -1,0 +1,19 @@
+﻿@using AutomotiveRepairSystem.ViewModels
+@model MakeDetailViewModel
+@{
+    ViewData["Titlw"] = "Delete a Make";
+}
+
+<h1>Delete Make</h1>
+
+<form asp-controller="Make" asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="MakeId" />
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" readonly/>
+    </div>
+
+    <button type="submit">Delete</button>
+</form>

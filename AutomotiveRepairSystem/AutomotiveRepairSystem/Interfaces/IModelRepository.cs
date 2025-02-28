@@ -9,5 +9,6 @@ namespace AutomotiveRepairSystem.Interfaces
         void CreateModel(Model model);
         Task<Model> DeleteModel(Guid modelId);
         void Save();
+        Task SaveAsync();
     }
 }

@@ -9,5 +9,6 @@ namespace AutomotiveRepairSystem.Interfaces
         void CreateFuel(Fuel fuel);
         Task<Fuel> DeleteFuel(Guid fuelId);
         void Save();
+        Task SaveAsync();
     }
 }

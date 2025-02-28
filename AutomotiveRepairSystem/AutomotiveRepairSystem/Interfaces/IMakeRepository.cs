@@ -9,5 +9,6 @@ namespace AutomotiveRepairSystem.Interfaces
         void CreateMake(Make make);
         Task<Make> DeleteMake(Guid makeId);
         void Save();
+        Task SaveAsync();
     }
 }

@@ -39,7 +39,7 @@ namespace AutomotiveRepairSystem.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(MakeViewModel viewModel)
+        public IActionResult Create(MakeViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -54,6 +54,47 @@ namespace AutomotiveRepairSystem.Controllers
                 _makeRepository.Save();
                 return RedirectToAction("Index");
             }
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(Guid makeId)
+        {
+            var make = await _makeRepository.GetMakeByIdAsync(makeId);
+
+            if (make == null)
+            {
+                ViewBag.Message = "The Model has not been found.";
+                return View();
+            }
+
+            var viewModel = new MakeDetailViewModel
+            {
+                MakeId = make.MakeId,
+                Name = make.Name,
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(MakeDetailViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var makeToDelete = await _makeRepository.GetMakeByIdAsync(viewModel.MakeId);
+
+                if (makeToDelete == null)
+                {
+                    ViewBag.Message = "Make was not found.";
+                    return View();
+                }
+
+                await _makeRepository.DeleteMake(viewModel.MakeId);
+                await _makeRepository.SaveAsync();
+                return RedirectToAction("Index");
+            }
+
             return View(viewModel);
         }
     }

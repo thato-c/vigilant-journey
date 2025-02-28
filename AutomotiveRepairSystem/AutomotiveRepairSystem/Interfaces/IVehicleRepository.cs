@@ -9,5 +9,6 @@ namespace AutomotiveRepairSystem.Interfaces
         void CreateVehicle(Vehicle vehicle);
         Task<Vehicle> DeleteVehicle(Guid vehicleId);
         void Save();
+        Task SaveAsync();
     }
 }
