@@ -15,14 +15,18 @@
             <th>
                 Name
             </th>
+            <th></th>
         </tr>
+        <tbody>
+            @foreach (var fuel in Model)
+            {
+                <tr>
+                    <td>@fuel.Name</td>
+                    <td>
+                        <a asp-controller="Fuel" asp-action="Delete" asp-route-fuelId="@fuel.FuelId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
-    <tbody>
-        @foreach (var fuel in Model)
-        {
-            <tr>
-                <td>@fuel.Name</td>
-            </tr>
-        }
-    </tbody>
 }
